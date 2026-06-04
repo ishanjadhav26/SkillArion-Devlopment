@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Emotion Detection | SkillArion Development</title>
+    <meta name="description" content="The World's First AI-Powered Dog-to-Human Language Translation Collar by SkillArion Development." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/animations.css" />
+  </head>
+  <body>
+    <!-- Global Particle System -->
+    <div id="global-particles"></div>
+    <!-- Ambient Orbs -->
+    <div class="orb orb-gold"></div>
+    <div class="orb orb-blue"></div>
+    
+    <!-- Page Loader -->
+    <div class="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    <!-- App Container -->
+    <div id="app">
+      
+      <!-- Product Hero -->
+      <section class="section" style="min-height: 80vh; display: flex; align-items: center; padding-top: 100px;">
+        <div class="container text-center hero-content">
+          <div class="badge pulse" style="margin-bottom: 2rem;">Deep Tech Hardware Initiative</div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem;">
+            Animal Emotion Detection & <br/>Protection System
+          </h1>
+          <h2 style="font-size: 1.5rem; color: var(--color-primary); font-family: var(--font-body); font-weight: 400; margin-bottom: 2rem;">
+            World's First AI-Powered Dog-to-Human Language Translation Collar
+          </h2>
+          <p class="text-muted" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2.5rem;">
+            Bridging the inter-species communication gap. Utilizing proprietary edge-AI and advanced biometrics to translate animal vocalizations and physiological data into actionable human insights.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center;">
+            <a href="#technology" class="btn btn-primary">Discover the Tech</a>
+            <a href="https://drive.google.com/file/d/1_LWRVAY7JG8o8vKNewjLl1FPxn6xET44/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              View Pitch Deck
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Executive Summary & Problem -->
+      <section class="section" style="background: var(--glass-bg);">
+        <div class="container animate-on-scroll">
+          <div class="grid grid-2">
+            <div>
+              <h2 class="text-gradient">The Communication Barrier</h2>
+              <p class="text-muted" style="margin-bottom: 1.5rem;">
+                Millions of pets and working animals suffer from undiagnosed stress, illness, and anxiety due to the human inability to accurately interpret animal signaling. Traditional veterinary care relies heavily on reactive observation, often treating symptoms only after they have become severe.
+              </p>
+              <h3 style="margin-top: 2rem;">Product Vision</h3>
+              <p class="text-muted">
+                To create a seamless, real-time translation interface that empowers pet owners, veterinarians, NGOs, and researchers to understand the emotional and physical state of canines, drastically reducing preventable suffering and improving training outcomes.
+              </p>
+            </div>
+            <div class="glass-card delay-200" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+              <h3 style="margin-bottom: 1rem; color: var(--color-primary);">Real World Impact</h3>
+              <p class="text-muted" style="margin-bottom: 2rem;">
+                Transforming animal welfare from guesswork into a data-driven science.
+              </p>
+              <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <div>
+                  <div style="font-size: 1.8rem; color: var(--color-text-main); font-family: var(--font-display); font-weight: 700;">NGOs</div>
+                  <div class="text-muted" style="font-size: 0.8rem;">Shelter Triage</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.8rem; color: var(--color-text-main); font-family: var(--font-display); font-weight: 700;">Vet</div>
+                  <div class="text-muted" style="font-size: 0.8rem;">Early Diagnostics</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.8rem; color: var(--color-text-main); font-family: var(--font-display); font-weight: 700;">City</div>
+                  <div class="text-muted" style="font-size: 0.8rem;">Stray Management</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it Works (Pipeline) -->
+      <section id="technology" class="section">
+        <div class="container">
+          <h2 class="section-title text-gradient animate-on-scroll">How It Works</h2>
+          
+          <div class="grid grid-3" style="margin-top: 3rem;">
+            <div class="glass-card animate-on-scroll delay-100">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem;">1. Smart Collar Architecture</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">
+                IoT-enabled collar equipped with high-fidelity microphones, heart rate monitors, accelerometer, and temperature sensors. Designed for rugged, all-weather deployment with ultra-low power consumption.
+              </p>
+            </div>
+            <div class="glass-card animate-on-scroll delay-200">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem;">2. Emotion Detection Pipeline</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">
+                On-device edge AI processes multimodal data streams in real-time, running classification algorithms to map physiological markers to a complex matrix of emotional states (anxiety, joy, pain, aggression).
+              </p>
+            </div>
+            <div class="glass-card animate-on-scroll delay-300">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem;">3. AI Translation Engine</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">
+                The core LLM translates the identified emotional matrix into contextual human language. A built-in Text-To-Speech (TTS) module allows the collar to physically "speak" to humans nearby, bridging the communication gap.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- System Architecture Placeholders -->
+      <section class="section">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">System Architecture</h2>
+          
+          <div class="grid grid-2" style="margin-bottom: 2rem;">
+            <div class="diagram-placeholder">
+              <h3>[ Smart Collar Architecture ]</h3>
+              <p class="text-muted" style="margin-top: 1rem;">IoT edge devices and biometric sensor arrays</p>
+            </div>
+            
+            <div class="diagram-placeholder">
+              <h3>[ AI Processing Pipeline ]</h3>
+              <p class="text-muted" style="margin-top: 1rem;">Multimodal data fusion and edge computing layer</p>
+            </div>
+            
+            <div class="diagram-placeholder">
+              <h3>[ Translation Workflow ]</h3>
+              <p class="text-muted" style="margin-top: 1rem;">Emotion detection matrix to NLP translation</p>
+            </div>
+            
+            <div class="diagram-placeholder">
+              <h3>[ Cloud Architecture ]</h3>
+              <p class="text-muted" style="margin-top: 1rem;">AWS IoT Core, Time-Series Databases, and API Gateways</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ecosystem & Tech Stack -->
+      <section class="section" style="background: var(--color-bg-main);">
+        <div class="container grid grid-2 animate-on-scroll">
+          <div class="glass-card" style="padding: 2rem;">
+            <h3>Ecosystem Integration</h3>
+            <ul style="list-style: none; padding-top: 1rem;">
+              <li style="margin-bottom: 1.5rem;">
+                <strong style="color: var(--color-primary);">Mobile Application:</strong> Real-time dashboard for owners tracking emotional trends, health vitals, and GPS location.
+              </li>
+              <li style="margin-bottom: 1.5rem;">
+                <strong style="color: var(--color-primary);">Emergency Alert System:</strong> Automated push notifications to owners and registered vets if critical distress or abnormal vitals are detected.
+              </li>
+              <li>
+                <strong style="color: var(--color-primary);">Research API:</strong> Anonymized aggregated data streams available for ethological and veterinary research institutions.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-gradient">Technology Stack</h2>
+            <div class="grid grid-2" style="margin-top: 2rem;">
+              <div>
+                <h4 style="color: var(--color-text-main);">Hardware</h4>
+                <p class="text-muted" style="font-size: 0.9rem;">Custom PCB, ARM Cortex-M, MEMS Mics, Bio-sensors</p>
+              </div>
+              <div>
+                <h4 style="color: var(--color-text-main);">Edge AI</h4>
+                <p class="text-muted" style="font-size: 0.9rem;">TensorFlow Lite, TinyML Acoustic Models</p>
+              </div>
+              <div>
+                <h4 style="color: var(--color-text-main);">Cloud infrastructure</h4>
+                <p class="text-muted" style="font-size: 0.9rem;">AWS IoT Core, Time-Series Databases</p>
+              </div>
+              <div>
+                <h4 style="color: var(--color-text-main);">Mobile App</h4>
+                <p class="text-muted" style="font-size: 0.9rem;">React Native, WebSockets for real-time telemetry</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real-World Applications -->
+      <section class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px);">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">Real-World Applications</h2>
+          <div class="grid grid-3" style="margin-top: 2rem;">
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Veterinary Medicine</h3>
+              <p class="text-muted">
+                Enable vets to obtain pre-appointment emotional baselines of animals before they arrive. Detect hidden pain, anxiety, or illness signatures that are invisible to the human eye, enabling faster and more accurate diagnoses.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Smart City & Stray Management</h3>
+              <p class="text-muted">
+                Partner with municipal corporations to deploy collar networks on stray animal populations, feeding real-time behavioral data to a city-wide welfare dashboard. Identify sick or aggressive animals proactively.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Rescue Organizations & NGOs</h3>
+              <p class="text-muted">
+                Equip shelters with AI-powered triage. Identify the most distressed animals in a large shelter instantly, prioritize care resources, and accelerate rehabilitation timelines.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Research & Ethology</h3>
+              <p class="text-muted">
+                Offer an anonymized data API to universities and ethology researchers, creating a new scientific paradigm for understanding canine behavior at population scale.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">K9 & Working Dogs</h3>
+              <p class="text-muted">
+                Monitor the emotional and physical state of police dogs, search-and-rescue animals, and military K9 units in real-time, ensuring optimal performance and long-term health.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Pet Insurance & Wellness</h3>
+              <p class="text-muted">
+                Integrate with pet insurance providers to offer preventive care alerts and wellness scoring, creating new data-driven premium models based on real-time biometric health data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Impact & Future Scope -->
+      <section class="section">
+        <div class="container animate-on-scroll">
+          <div class="grid grid-2">
+            <div>
+              <h2 class="text-gradient">Social Impact</h2>
+              <p class="text-muted" style="margin-bottom: 1.5rem;">
+                Every year, millions of animals suffer in silence. They cannot describe pain, anxiety, or loneliness in a language humans understand. The Animal Emotion Detection system is not just a product — it is a fundamental shift in humanity's moral relationship with animals.
+              </p>
+              <p class="text-muted">
+                By making emotional states legible through data, we create a world where neglect and undetected suffering become things of the past. Welfare transforms from reactive to proactive, from guesswork to evidence-based care.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h3 style="margin-bottom: 1.5rem;">Future Scope</h3>
+              <ul style="list-style: none;">
+                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                  <span style="color: var(--color-primary); font-weight: 700;">01</span>
+                  <div>
+                    <strong>Multi-Species Expansion</strong>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Extend the model to felines, equines, and livestock beyond canines.</p>
+                  </div>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                  <span style="color: var(--color-primary); font-weight: 700;">02</span>
+                  <div>
+                    <strong>AR/VR Integration</strong>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Real-time emotional overlay in AR glasses for handlers and vets.</p>
+                  </div>
+                </li>
+                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                  <span style="color: var(--color-primary); font-weight: 700;">03</span>
+                  <div>
+                    <strong>Government Policy Integration</strong>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Provide data to inform national animal welfare legislation and enforcement.</p>
+                  </div>
+                </li>
+                <li style="display: flex; gap: 0.75rem;">
+                  <span style="color: var(--color-primary); font-weight: 700;">04</span>
+                  <div>
+                    <strong>Global Research Consortium</strong>
+                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Build the world's largest open ethological dataset through institutional partnerships.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Innovation CTA -->
+      <section class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px); border-top: 1px solid var(--glass-border);">
+        <div class="container text-center animate-on-scroll">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Join the Innovation Journey</h2>
+          <p class="text-muted" style="max-width: 700px; margin: 0 auto 2.5rem;">
+            We invite leading incubators, research institutions, and innovation partners to collaborate on hardware prototyping and finalizing our acoustic-emotion neural networks. Let's build the future of inter-species communication.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <p class="text-muted" style="width: 100%; margin-bottom: 1rem;">Want to See Our Pitch Deck?</p>
+            <a href="https://drive.google.com/file/d/1_LWRVAY7JG8o8vKNewjLl1FPxn6xET44/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">
+              View Pitch Deck
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- tsparticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2/tsparticles.slim.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
+
