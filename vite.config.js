@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         acis: resolve(__dirname, 'acis.html'),
         'animal-ai': resolve(__dirname, 'animal-ai.html'),
+        'path-guard': resolve(__dirname, 'path-guard.html'),
       },
     },
   },
