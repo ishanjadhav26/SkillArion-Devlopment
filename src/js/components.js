@@ -17,7 +17,8 @@ const navbarTemplate = `
         <a href="/index.html" class="nav-link">Home</a>
         <a href="/acis.html" class="nav-link">ACIS</a>
         <a href="/animal-ai.html" class="nav-link">Animal AI</a>
-        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem;">Investor Relations</a>
+        <a href="/path-guard.html" class="nav-link">Path Guard</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem;">Partnerships</a>
       </nav>
     </div>
   </header>
@@ -44,6 +45,7 @@ const footerTemplate = `
           <ul class="footer-links">
             <li><a href="/acis.html">AI Classroom Intelligence</a></li>
             <li><a href="/animal-ai.html">Animal Emotion Detection</a></li>
+            <li><a href="/path-guard.html">Path Guard Glasses</a></li>
           </ul>
         </div>
         
@@ -52,7 +54,7 @@ const footerTemplate = `
           <ul class="footer-links">
             <li><a href="/index.html#about">About Us</a></li>
             <li><a href="/index.html#vision">Vision & Mission</a></li>
-            <li><a href="/index.html#investors">Investors</a></li>
+            <li><a href="/index.html#partnerships">Partnerships</a></li>
           </ul>
         </div>
         

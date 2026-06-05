@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Path Guard | SkillArion Development</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/animations.css" />
+  </head>
+  <body>
+    <!-- Global Particle System -->
+    <div id="global-particles"></div>
+    <!-- Ambient Orbs -->
+    <div class="orb orb-gold"></div>
+    <div class="orb orb-blue"></div>
+    
+    <!-- Page Loader -->
+    <div class="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    <!-- App Container -->
+    <div id="app">
+      
+      <!-- Hero Section -->
+      <section class="section" style="min-height: 90vh; display: flex; align-items: center; position: relative; padding-top: 100px;">
+        <div class="container text-center hero-content" style="position: relative; z-index: 1;">
+          <div class="badge pulse" style="margin-bottom: 2rem;">Path Guard</div>
+          <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2;">
+            Empowering Independence Through <br/>
+            <span class="text-gradient">Artificial Intelligence</span>
+          </h1>
+          <p class="text-muted" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.6;">
+            Path Guard is an AI-powered smart wearable system designed to assist visually impaired individuals through real-time navigation, object detection, voice guidance, OCR reading, medicine recognition, currency identification, and emergency safety intelligence.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#features" class="btn btn-primary">Explore Technology</a>
+            <a href="#architecture" class="btn btn-secondary">View Architecture</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Executive Summary -->
+      <section class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container animate-on-scroll">
+          <div class="grid grid-2" style="align-items: center;">
+            <div>
+              <h2 class="text-gradient" style="margin-bottom: 1.5rem;">Executive Summary</h2>
+              <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.6;">
+                Millions of visually impaired individuals face daily challenges related to navigation, obstacle awareness, medicine identification, and financial independence.
+              </p>
+              <p class="text-muted" style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.6;">
+                Path Guard addresses these challenges through a unified AI-powered wearable platform. By combining Computer Vision, GPS Navigation, and Voice Assistance into a discreet smart glass form factor, we are redefining accessibility technology.
+              </p>
+              <ul style="list-style: none; margin-top: 2rem;">
+                <li style="margin-bottom: 0.5rem; color: var(--color-primary);">✓ Accessibility & Independence</li>
+                <li style="margin-bottom: 0.5rem; color: var(--color-primary);">✓ Safety & Smart Navigation</li>
+                <li style="margin-bottom: 0.5rem; color: var(--color-primary);">✓ Healthcare Accessibility</li>
+                <li style="color: var(--color-primary);">✓ Assistive Technology Innovation</li>
+              </ul>
+            </div>
+            <div class="glass-card" style="padding: 3rem; text-align: center;">
+              <h3 style="font-size: 4rem; color: var(--color-primary); margin-bottom: 0.5rem;">2.2B+</h3>
+              <p class="text-muted" style="font-size: 1.1rem;">People globally with vision impairment</p>
+              <div style="width: 50px; height: 2px; background: var(--color-primary); margin: 2rem auto;"></div>
+              <h3 style="font-size: 4rem; color: var(--color-primary); margin-bottom: 0.5rem;">1st</h3>
+              <p class="text-muted" style="font-size: 1.1rem;">Unified AI Wearable Platform of its kind</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem Statement -->
+      <section class="section">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">The Challenge</h2>
+          <p class="text-muted text-center" style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">
+            Visually impaired individuals face systemic barriers to independence that traditional mobility aids cannot solve.
+          </p>
+          <div class="grid grid-3">
+            <div class="glass-card">
+              <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Navigation & Obstacles</h4>
+              <p class="text-muted" style="font-size: 0.9rem;">Constant risk of injury from dynamic environments and overhead obstacles that white canes cannot detect.</p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Financial Independence</h4>
+              <p class="text-muted" style="font-size: 0.9rem;">Inability to easily identify currency notes, leading to reliance on others during financial transactions.</p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Healthcare & Medicine</h4>
+              <p class="text-muted" style="font-size: 0.9rem;">Dangerous potential for medication errors due to identically shaped pill bottles and unreadable labels.</p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Environmental Awareness</h4>
+              <p class="text-muted" style="font-size: 0.9rem;">Difficulty reading public signs, menus, and documents without dedicated Braille translations.</p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Emergency Situations</h4>
+              <p class="text-muted" style="font-size: 0.9rem;">Lack of immediate, location-aware SOS signaling when disoriented or in danger.</p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Dependence on Others</h4>
+              <p class="text-muted" style="font-size: 0.9rem;">A cumulative loss of autonomy that impacts mental health, education, and career opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Features -->
+      <section id="features" class="section" style="background: var(--color-bg-main);">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">Core Features</h2>
+          <p class="text-muted text-center" style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">
+            Path Guard integrates nine powerful systems into a single intuitive interface.
+          </p>
+          
+          <div class="grid grid-3" style="gap: 2rem;">
+            <div class="glass-card delay-100">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">👁️</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Real-Time Object Detection</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Uses YOLOv8 and advanced Computer Vision to identify and announce surrounding objects instantly.</p>
+            </div>
+            <div class="glass-card delay-200">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🛑</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Obstacle Avoidance</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Combines ultrasonic sensors and AI to detect drop-offs and overhead hazards beyond cane reach.</p>
+            </div>
+            <div class="glass-card delay-300">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🎙️</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Voice Guidance Assistant</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Natural, conversational voice-based interaction for hands-free control and feedback.</p>
+            </div>
+            <div class="glass-card delay-100">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">📍</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">GPS Navigation</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Turn-by-turn safe route guidance optimized for pedestrian safety and accessibility.</p>
+            </div>
+            <div class="glass-card delay-200">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">💵</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Currency Recognition</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Accurately identifies and announces currency denominations for confident financial transactions.</p>
+            </div>
+            <div class="glass-card delay-300">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">💊</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Medicine Identification</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Recognizes medicine packaging and reads dosage instructions to prevent critical errors.</p>
+            </div>
+            <div class="glass-card delay-100">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">📖</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">OCR Reading</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Real-time text extraction to read books, street signs, menus, and printed documents aloud.</p>
+            </div>
+            <div class="glass-card delay-200">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🚨</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Emergency SOS</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">One-touch trigger to broadcast live location and audio alerts to designated emergency contacts.</p>
+            </div>
+            <div class="glass-card delay-300">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🌐</div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Multi-Language Support</h3>
+              <p class="text-muted" style="font-size: 0.9rem;">Full operational support in English, Hindi, and Telugu, promoting true regional inclusivity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Stack -->
+      <section class="section">
+        <div class="container text-center animate-on-scroll">
+          <h2 class="section-title text-gradient">Technology Stack</h2>
+          <div class="grid grid-4" style="margin-top: 3rem; gap: 1rem;">
+            <div class="badge pulse">Python</div>
+            <div class="badge pulse">OpenCV</div>
+            <div class="badge pulse">YOLOv8</div>
+            <div class="badge pulse">TensorFlow</div>
+            <div class="badge pulse">PyTorch</div>
+            <div class="badge pulse">Tesseract OCR</div>
+            <div class="badge pulse">Speech Recognition</div>
+            <div class="badge pulse">gTTS & pyttsx3</div>
+            <div class="badge pulse">Raspberry Pi</div>
+            <div class="badge pulse">GPS Module</div>
+            <div class="badge pulse">Ultrasonic Sensors</div>
+            <div class="badge pulse">IoT Sensors</div>
+            <div class="badge pulse" style="grid-column: span 4;">Flask API</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture & Workflow -->
+      <section id="architecture" class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">System Architecture & AI Workflow</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2rem;">
+            <!-- System Architecture -->
+            <div class="glass-card" style="padding: 0; overflow: hidden; position: relative;">
+              <img src="/images/path-guard-architecture.jpg" alt="Path Guard System Architecture" style="width: 100%; height: auto; display: block; border-radius: inherit;">
+            </div>
+
+            <!-- AI Workflow -->
+            <div class="glass-card" style="padding: 0; overflow: hidden; position: relative;">
+              <img src="/images/path-guard-workflow.jpg" alt="Path Guard AI Workflow" style="width: 100%; height: auto; display: block; border-radius: inherit;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Use Cases -->
+      <section class="section">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">Use Cases</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Safe Navigation</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Obstacle Detection</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Currency Recognition</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Medicine Identification</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Document Reading</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Emergency Assistance</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Public Transport Navigation</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Educational Accessibility</span>
+            <span class="badge" style="background: rgba(200, 155, 92, 0.1); border-color: var(--color-primary); padding: 1rem 2rem; font-size: 1.1rem;">Healthcare Accessibility</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Section -->
+      <section class="section" style="background: var(--color-bg-main);">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">The Path Guard Impact</h2>
+          <div class="grid grid-2" style="margin-top: 3rem;">
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Social Impact</h3>
+              <p class="text-muted" style="font-size: 0.95rem;">Restores dignity and autonomy, allowing visually impaired individuals to navigate society without relying on constant human assistance.</p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Safety Impact</h3>
+              <p class="text-muted" style="font-size: 0.95rem;">Drastically reduces injury rates by predicting overhead collisions and environmental drop-offs, while providing instant SOS capabilities.</p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Healthcare Impact</h3>
+              <p class="text-muted" style="font-size: 0.95rem;">Prevents fatal medication mix-ups through accurate computer vision label reading, enhancing overall health outcomes.</p>
+            </div>
+            <div class="glass-card">
+              <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Economic Impact</h3>
+              <p class="text-muted" style="font-size: 0.95rem;">Facilitates employment opportunities and independent financial management through reliable currency and document reading.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Section -->
+      <section class="section">
+        <div class="container animate-on-scroll">
+          <h2 class="section-title text-gradient">Technology Comparison</h2>
+          <div class="glass-card" style="margin-top: 3rem; overflow-x: auto;">
+            <table style="width: 100%; text-align: left; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--glass-border);">
+                  <th style="padding: 1rem; color: var(--color-primary);">Feature</th>
+                  <th style="padding: 1rem;">Traditional White Cane</th>
+                  <th style="padding: 1rem;">Basic Smart Stick</th>
+                  <th style="padding: 1rem; color: var(--color-primary); font-size: 1.1rem;">Path Guard</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">Obstacle Detection (Ground)</td>
+                  <td style="padding: 1rem; color: #a0a0a0;">Yes (Manual)</td>
+                  <td style="padding: 1rem; color: #a0a0a0;">Yes (Sensor)</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes (AI + Sensor)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">Object Recognition</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes (YOLOv8)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">OCR Reading</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">GPS Navigation</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">Voice Assistance</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #a0a0a0;">Limited (Buzzer)</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes (Conversational)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">Medicine Recognition</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 1rem;">Currency Detection</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes</td>
+                </tr>
+                <tr>
+                  <td style="padding: 1rem;">Emergency SOS</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #ff6b6b;">No</td>
+                  <td style="padding: 1rem; color: #fff; font-weight: 600;">Yes (Live Location)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap & Market -->
+      <section class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px); border-top: 1px solid var(--glass-border);">
+        <div class="container animate-on-scroll">
+          <div class="grid grid-2">
+            <div>
+              <h2 class="text-gradient">Future Roadmap</h2>
+              <div style="margin-top: 2rem;">
+                <ul style="list-style: none;">
+                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                    <span style="color: var(--color-primary); font-weight: 700;">01</span>
+                    <div>
+                      <strong>Face Recognition</strong>
+                      <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Identify saved contacts and family members instantly.</p>
+                    </div>
+                  </li>
+                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                    <span style="color: var(--color-primary); font-weight: 700;">02</span>
+                    <div>
+                      <strong>Traffic Signal & Sign Detection</strong>
+                      <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Navigate complex urban environments safely.</p>
+                    </div>
+                  </li>
+                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                    <span style="color: var(--color-primary); font-weight: 700;">03</span>
+                    <div>
+                      <strong>Smart City & IoT Integration</strong>
+                      <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Sync with smart transit and crosswalk systems.</p>
+                    </div>
+                  </li>
+                  <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+                    <span style="color: var(--color-primary); font-weight: 700;">04</span>
+                    <div>
+                      <strong>Health & Fall Detection</strong>
+                      <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Biometric tracking and automatic dispatch on severe impact.</p>
+                    </div>
+                  </li>
+                  <li style="display: flex; gap: 0.75rem;">
+                    <span style="color: var(--color-primary); font-weight: 700;">05</span>
+                    <div>
+                      <strong>Cloud AI Processing & App</strong>
+                      <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Companion mobile application for caregivers with autonomous assistance modes.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-gradient">Market Opportunity</h2>
+              <div class="glass-card" style="margin-top: 2rem;">
+                <p class="text-muted" style="margin-bottom: 1.5rem; line-height: 1.6;">
+                  Path Guard sits at the high-growth intersection of <strong>Assistive Technology</strong>, <strong>Smart Healthcare</strong>, and <strong>AI for Social Good</strong>. 
+                </p>
+                <div style="border-left: 2px solid var(--color-primary); padding-left: 1rem; margin-bottom: 1.5rem;">
+                  <h4 style="font-size: 1.5rem; color: #fff;">$31.8B</h4>
+                  <p class="text-muted" style="font-size: 0.9rem;">Global Assistive Tech Market by 2030</p>
+                </div>
+                <div style="border-left: 2px solid var(--color-primary); padding-left: 1rem;">
+                  <h4 style="font-size: 1.5rem; color: #fff;">285M+</h4>
+                  <p class="text-muted" style="font-size: 0.9rem;">Target Addressable Users Worldwide</p>
+                </div>
+                <p class="text-muted" style="margin-top: 1.5rem; font-size: 0.95rem;">
+                  Through strategic partnerships with NGOs, governments, and healthcare providers, Path Guard is positioned to dominate the next generation of educational and healthcare accessibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTA -->
+      <section class="section" style="background: rgba(10, 15, 25, 0.8); backdrop-filter: blur(10px); border-top: 1px solid var(--glass-border);">
+        <div class="container text-center animate-on-scroll">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Join the Accessibility Revolution</h2>
+          <p class="text-muted" style="max-width: 600px; margin: 0 auto 2.5rem;">
+            Partner with us to deploy intelligent assistive technologies that transform lives.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:info@skillariondevelopment.in" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Partner With Us</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- tsparticles v2 slim bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2/tsparticles.slim.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
