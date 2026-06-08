@@ -60,28 +60,35 @@ document.addEventListener('DOMContentLoaded', () => {
             background: { color: { value: 'transparent' } },
             fpsLimit: 60,
             interactivity: {
-              events: { onHover: { enable: true, mode: 'grab' } },
-              modes: { grab: { distance: 180, links: { opacity: 0.5 } } }
+              events: { 
+                onHover: { enable: true, mode: 'grab' },
+                onClick: { enable: true, mode: 'push' }
+              },
+              modes: { 
+                grab: { distance: 200, links: { opacity: 0.8, color: '#C89B5C' } },
+                push: { quantity: 4 }
+              }
             },
             particles: {
-              color: { value: ['#C89B5C', '#4a90e2', '#e0e0e0'] },
+              color: { value: ['#C89B5C', '#ffffff', '#4a90e2'] },
               links: {
-                color: '#C89B5C', distance: 140, enable: true,
-                opacity: 0.12, width: 1
+                color: '#ffffff', distance: 160, enable: true,
+                opacity: 0.15, width: 1.5,
+                triangles: { enable: true, opacity: 0.03 }
               },
               move: {
-                enable: true, speed: 0.7, direction: 'none',
+                enable: true, speed: 0.4, direction: 'none',
                 random: true, outModes: { default: 'bounce' }
               },
-              number: { density: { enable: true, area: 900 }, value: 70 },
+              number: { density: { enable: true, area: 800 }, value: 120 },
               opacity: {
-                value: { min: 0.08, max: 0.4 },
-                animation: { enable: true, speed: 0.8, sync: false }
+                value: { min: 0.1, max: 0.8 },
+                animation: { enable: true, speed: 1, sync: false }
               },
               shape: { type: 'circle' },
               size: {
-                value: { min: 1, max: 3.5 },
-                animation: { enable: true, speed: 1.5, sync: false }
+                value: { min: 1, max: 3 },
+                animation: { enable: true, speed: 2, sync: false }
               }
             },
             detectRetina: true
