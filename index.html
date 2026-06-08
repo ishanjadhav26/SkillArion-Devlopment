@@ -2,309 +2,166 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkillArion Development | Animal Intelligence Research Company</title>
+    <title>SkillArion Development | Future of AI & Deep Tech</title>
+    <meta name="description" content="SkillArion Development builds breakthrough AI solutions for education and animal welfare. Discover ACIS and our Animal Emotion Detection systems." />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/src/css/main.css" />
     <link rel="stylesheet" href="/src/css/animations.css" />
   </head>
   <body>
-    <!-- Global Background Elements -->
+    <!-- Global Particle System -->
     <div id="global-particles"></div>
+    <!-- Ambient Orbs -->
     <div class="orb orb-gold"></div>
     <div class="orb orb-blue"></div>
-    
-    <!-- Floating Emotion Particles -->
-    <div class="emotion-particle ep-1">🔊</div>
-    <div class="emotion-particle ep-2">🧠</div>
-    <div class="emotion-particle ep-3">⚡</div>
-    <div class="emotion-particle ep-4">❤️</div>
-    <div class="emotion-particle ep-5">📡</div>
-
-    <!-- Floating Data Streams -->
-    <div class="data-stream" style="left: 15%; animation-delay: 0s;"></div>
-    <div class="data-stream" style="left: 45%; animation-delay: 2s;"></div>
-    <div class="data-stream" style="left: 85%; animation-delay: 4s;"></div>
     
     <!-- Page Loader -->
     <div class="page-loader">
       <div class="loader-spinner"></div>
     </div>
 
-    <!-- App Container -->
+    <!-- App Container (Navbar and Footer injected here) -->
     <div id="app">
       
-      <!-- Cinematic Hero Section -->
-      <section class="section" style="justify-content: center; text-align: center; position: relative;">
-        <!-- Large Background Silhouette Hint -->
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.03; font-size: 80vh; pointer-events: none; z-index: 0; filter: blur(8px);">🐕</div>
-        
-        <div class="container hero-content" style="z-index: 2;">
-          <div class="badge primary pulse">Frontier Research</div>
-          <h1 class="display-title">
-            What If Animals Could <br/>
-            <span class="text-gradient">Finally Be Understood?</span>
+      <!-- Hero Section -->
+      <section class="section" style="min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 100px;">
+        <div class="container text-center hero-content" style="position: relative; z-index: 1;">
+          <a href="https://www.skillariondevelopment.in/" target="_blank" class="badge pulse" style="margin-bottom: 2rem; text-decoration: none;">SkillArion Development</a>
+          <h1 style="font-size: 4rem; margin-bottom: 1.5rem;">
+            Pioneering Intelligence for <br/>
+            <span class="text-gradient">Humanity & Beyond</span>
           </h1>
-          
-          <div class="audio-visualizer" style="margin-bottom: 2rem;">
-            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-          </div>
-
-          <p class="text-muted" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 3rem; line-height: 1.6;">
-            For thousands of years, animals have communicated through sound, emotion, behavior, and instinct.<br/><br/>
-            <strong style="color: #fff; font-weight: 500;">For the first time, Artificial Intelligence may allow us to understand them.</strong>
+          <p class="text-muted" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 2.5rem;">
+            SkillArion Development engineers scalable, breakthrough AI architectures bridging the gap between accessibility tech, advanced education, and animal welfare.
           </p>
-          <div class="flex-center" style="gap: 1.5rem; flex-wrap: wrap;">
-            <a href="#vision" class="btn btn-primary">Explore The Future</a>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#products" class="btn btn-primary">Explore Our Innovation</a>
+            <a href="#partnerships" class="btn btn-secondary">
+              Explore Opportunities
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- Moonshot Vision -->
-      <section id="vision" class="section" style="background: rgba(5, 7, 10, 0.8); backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
-        <div class="container animate-on-scroll">
-          <div class="grid grid-2" style="align-items: center; gap: 4rem;">
-            <div>
-              <h2 class="text-gradient" style="font-size: 3rem; margin-bottom: 1.5rem;">A New Language Between Species</h2>
-              <p class="text-dim" style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                The internet connected people.
-              </p>
-              <p class="text-dim" style="font-size: 1.2rem; margin-bottom: 1.5rem;">
-                Artificial Intelligence connected knowledge.
-              </p>
-              <p class="text-muted" style="font-size: 1.4rem; font-weight: 600; margin-bottom: 2rem; color: #fff;">
-                The next frontier is connecting species.
-              </p>
-              <p class="text-muted" style="font-size: 1.1rem;">
-                SkillArion Development is researching foundational technologies that may one day enable meaningful communication between humans and animals. By decoding complex acoustic markers, biometric telemetry, and behavioral syntax, we are building the Rosetta Stone of the animal kingdom.
-              </p>
-            </div>
-            <div class="glass-card" style="padding: 0; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-              <!-- Visual placeholder for a cinematic graphic -->
-              <div class="neural-node" style="font-size: 6rem; position: absolute;">🧠</div>
-              <div class="orb orb-gold" style="width: 200px; height: 200px; filter: blur(40px); top: auto; right: auto;"></div>
-            </div>
+      <!-- About & Mission Section -->
+      <section id="about" class="section" style="background: var(--glass-bg);">
+        <div class="container grid grid-2 animate-on-scroll">
+          <div>
+            <h2 class="text-gradient">About SkillArion</h2>
+            <p class="text-muted" style="margin-bottom: 1.5rem;">
+              SkillArion Development is an AI-first startup focused on high-impact sectors that traditional tech ignores. We engineer robust, scalable systems that transform educational outcomes and redefine animal-human interaction.
+            </p>
+            <h3>Mission & Vision</h3>
+            <p class="text-muted">
+              <strong>Mission:</strong> To democratize premium educational tools through intelligent systems and to give a voice to the voiceless through advanced biometric and behavioral AI.<br><br>
+              <strong>Vision:</strong> A world where intelligence—both human and artificial—is leveraged to create equitable learning environments and unprecedented inter-species understanding.
+            </p>
+          </div>
+          <div class="glass-card delay-200">
+            <h3>Why SkillArion?</h3>
+            <ul style="list-style: none; padding-top: 1rem;">
+              <li style="margin-bottom: 1rem;"><strong>✓ Deep Tech Focus:</strong> Proprietary ML models, not just GPT wrappers.</li>
+              <li style="margin-bottom: 1rem;"><strong>✓ Dual Market Strategy:</strong> Diversified portfolio targeting multi-billion dollar markets.</li>
+              <li style="margin-bottom: 1rem;"><strong>✓ High Scalability:</strong> Cloud-native architectures designed for global deployment.</li>
+              <li><strong>✓ Social Impact:</strong> Measurable improvements in classroom equity and animal welfare.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Why This Is Hard (The Challenge) -->
-      <section id="challenges" class="section">
-        <div class="container animate-on-scroll">
-          <h2 class="section-title text-gradient">One of the Hardest Problems in Artificial Intelligence</h2>
-          <p class="text-center text-muted" style="max-width: 800px; margin: 0 auto 4rem; font-size: 1.1rem;">
-            Decoding inter-species communication requires breakthroughs in unlabelled audio processing, real-time edge computing, and non-verbal behavioral mapping.
-          </p>
-          
-          <div class="grid grid-3">
+      <!-- Flagship Products -->
+      <section id="products" class="section">
+        <div class="container">
+          <h2 class="section-title text-gradient animate-on-scroll">Flagship Project</h2>
+          <div class="grid grid-1" style="max-width: 800px; margin: 0 auto;">
+            
+            <!-- Animal AI Card -->
+            <div class="glass-card animate-on-scroll delay-100">
+              <div class="badge">Hardware / AI</div>
+              <h3 style="font-size: 2rem; margin-bottom: 1rem;">Animal Emotion Detection & Protection System</h3>
+              <p class="text-muted" style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">
+                The world's first AI-powered dog-to-human language translation collar. Utilizing advanced biometrics and acoustic analysis to translate animal vocalizations and vitals into human language.
+              </p>
+              <a href="/animal-ai.html" class="btn btn-primary" style="width: 100%; padding: 1rem;">View Project Details &rarr;</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Ecosystem -->
+      <section class="section" style="background: var(--color-bg-main);">
+        <div class="container text-center animate-on-scroll">
+          <h2 class="section-title">Our Technology Ecosystem</h2>
+          <div class="grid grid-3" style="margin-top: 3rem;">
             <div class="glass-card delay-100">
-              <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary);">📊</div>
-              <h3 style="font-size: 1.3rem;">Acoustic Pattern Recognition</h3>
-              <p class="text-dim">Extracting MFCC and spectral features from animal vocalizations in noisy, real-world environments without massive pre-labelled datasets.</p>
+              <h3 class="text-gradient">Neural Processing</h3>
+              <p class="text-muted">Custom transformer models optimized for behavioral analysis and emotion detection.</p>
             </div>
             <div class="glass-card delay-200">
-              <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary);">🧠</div>
-              <h3 style="font-size: 1.3rem;">Emotion Detection</h3>
-              <p class="text-dim">Mapping non-linear physiological telemetry (heart rate, SpO2) to complex psychological states like anxiety, fear, and pain.</p>
+              <h3 class="text-gradient">Edge Computing</h3>
+              <p class="text-muted">Low-latency processing deployed directly on hardware for real-time animal translation.</p>
             </div>
             <div class="glass-card delay-300">
-              <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary);">⚡</div>
-              <h3 style="font-size: 1.3rem;">Real-Time Edge Inference</h3>
-              <p class="text-dim">Running intensive CNN-LSTM fusion models directly on low-power wearable IoT devices without persistent cloud connectivity.</p>
-            </div>
-            <div class="glass-card delay-100">
-              <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary);">🧬</div>
-              <h3 style="font-size: 1.3rem;">Behavioral Intelligence</h3>
-              <p class="text-dim">Understanding spatial and kinematic data through motion sensors to contextualize vocalizations against physical actions.</p>
-            </div>
-            <div class="glass-card delay-200">
-              <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary);">🌐</div>
-              <h3 style="font-size: 1.3rem;">Cross-Species Scalability</h3>
-              <p class="text-dim">Designing foundational models capable of generalized transfer learning across vast evolutionary taxonomy.</p>
-            </div>
-            <div class="glass-card delay-300">
-              <div style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-primary);">🗣️</div>
-              <h3 style="font-size: 1.3rem;">Context Understanding</h3>
-              <p class="text-dim">Translating abstract instinctual alerts into structured, actionable human language through NLP pipelines.</p>
+              <h3 class="text-gradient">Cloud Architecture</h3>
+              <p class="text-muted">Highly scalable microservices capable of handling millions of concurrent sensor data streams.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Animal Intelligence Stack -->
-      <section id="stack" class="section" style="background: rgba(5, 7, 10, 0.6); backdrop-filter: blur(20px);">
-        <div class="container animate-on-scroll">
-          <h2 class="section-title text-gradient">The Animal Intelligence Stack</h2>
-          <p class="text-center text-muted" style="max-width: 700px; margin: 0 auto 4rem; font-size: 1.1rem;">
-            A proprietary vertical architecture moving from raw biological signals to human-readable translation.
-          </p>
-          
-          <div class="stack-layer delay-100">
-            <div class="stack-box">
-              <h3 style="color: #fff; margin-bottom: 0.5rem;">Human Understanding</h3>
-              <p class="text-dim">Natural Language Generation, Notifications, Voice Alerts</p>
-            </div>
-            <div class="stack-arrow">↓</div>
-          </div>
-          
-          <div class="stack-layer delay-200">
-            <div class="stack-box" style="border-color: rgba(200, 155, 92, 0.4);">
-              <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Translation Intelligence</h3>
-              <p class="text-dim">LLM-based Contextual Mapping, Semantic Interpretation</p>
-            </div>
-            <div class="stack-arrow">↓</div>
-          </div>
-          
-          <div class="stack-layer delay-300">
-            <div class="stack-box">
-              <h3 style="color: #fff; margin-bottom: 0.5rem;">Context Intelligence</h3>
-              <p class="text-dim">Sensor Fusion, GPS Correlation, Historical Baselines</p>
-            </div>
-            <div class="stack-arrow">↓</div>
-          </div>
-          
-          <div class="stack-layer delay-400">
-            <div class="stack-box">
-              <h3 style="color: #fff; margin-bottom: 0.5rem;">Emotion Intelligence</h3>
-              <p class="text-dim">CNN-LSTM Ensembles, Deep Neural Networks, Affective Computing</p>
-            </div>
-            <div class="stack-arrow">↓</div>
-          </div>
-          
-          <div class="stack-layer delay-500">
-            <div class="stack-box" style="display: flex; gap: 1rem;">
-              <div style="flex: 1; border-right: 1px solid var(--glass-border);">
-                <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">Behavior Intelligence</h3>
-                <p class="text-dim" style="font-size: 0.8rem;">Kinematics, Activity Levels, Posture Analysis</p>
-              </div>
-              <div style="flex: 1;">
-                <h3 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">Audio Intelligence</h3>
-                <p class="text-dim" style="font-size: 0.8rem;">Spectral Analysis, MFCC Extraction, Pitch/Tone</p>
+      <!-- Roadmap & Market -->
+      <section class="section">
+        <div class="container grid grid-2 animate-on-scroll">
+          <div>
+            <h2 class="text-gradient">Market Impact</h2>
+            <div style="margin-top: 2rem;">
+              <div style="border-left: 2px solid var(--color-primary); padding-left: 1rem;">
+                <h4 style="font-size: 2rem;">$320B+</h4>
+                <p class="text-muted">Global Pet Care & Welfare Market by 2028</p>
               </div>
             </div>
-            <div class="stack-arrow">↓</div>
           </div>
-          
-          <div class="stack-layer">
-            <div class="stack-box" style="background: rgba(255,255,255,0.02);">
-              <h3 style="color: var(--color-text-muted); margin-bottom: 0.5rem;">Raw Animal Signals</h3>
-              <p class="text-dim">Vocalizations, Heart Rate, SpO2, Temperature, Movement (IoT Edge Wearables)</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Research & Innovation Lab -->
-      <section id="research" class="section">
-        <div class="container animate-on-scroll">
-          <div class="grid grid-2" style="align-items: center;">
-            <div class="glass-card" style="padding: 0; position: relative;">
-              <img src="/images/animal-ai-pipeline.jpg" alt="AI Pipeline Research" style="width: 100%; height: auto; display: block; border-radius: var(--border-radius-lg);">
-            </div>
-            <div style="padding-left: 2rem;">
-              <div class="badge primary">Inside the Lab</div>
-              <h2 class="text-gradient" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Research & Innovation Lab</h2>
-              <p class="text-muted" style="margin-bottom: 2rem; font-size: 1.1rem;">
-                SkillArion Development operates at the edge of applied science. Our ongoing R&D initiatives focus on breaking technological barriers in affective computing for non-human subjects.
-              </p>
-              
-              <ul style="list-style: none;">
-                <li style="margin-bottom: 1.5rem;">
-                  <strong style="color: #fff; display: block; font-size: 1.1rem;">Animal Emotion Modeling</strong>
-                  <span class="text-dim">Developing supervised datasets correlating physiological spikes with documented behavioral responses.</span>
-                </li>
-                <li style="margin-bottom: 1.5rem;">
-                  <strong style="color: #fff; display: block; font-size: 1.1rem;">Audio Foundation Models</strong>
-                  <span class="text-dim">Training large-scale acoustic neural networks to classify sub-vocal frequencies and micro-barks.</span>
-                </li>
-                <li style="margin-bottom: 1.5rem;">
-                  <strong style="color: #fff; display: block; font-size: 1.1rem;">Veterinary AI & Predictive Health</strong>
-                  <span class="text-dim">Algorithmic early-warning systems for chronic pain and medical distress detection.</span>
-                </li>
-                <li>
-                  <strong style="color: #fff; display: block; font-size: 1.1rem;">Edge AI Wearables</strong>
-                  <span class="text-dim">Miniaturizing inference engines to run locally on low-compute battery-powered hardware.</span>
-                </li>
-              </ul>
-            </div>
+          <div class="glass-card delay-200">
+            <h3>Strategic Roadmap</h3>
+            <ul style="list-style: none; padding-top: 1rem; color: var(--color-text-muted);">
+              <li style="margin-bottom: 1rem;"><strong>Phase 1:</strong> Core R&D and Neural Network Optimization</li>
+              <li style="margin-bottom: 1rem;"><strong>Phase 2:</strong> Prototype Deployment in Partner Institutions</li>
+              <li style="margin-bottom: 1rem;"><strong>Phase 3:</strong> Incubation and Strategic Alliances Formation</li>
+              <li><strong>Phase 4:</strong> Commercial Scaling & Global Reach</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Built at the Intersection -->
-      <section class="section" style="background: var(--glass-bg); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+      <!-- Partnerships -->
+      <section id="partnerships" class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px);">
         <div class="container text-center animate-on-scroll">
-          <h2 class="text-gradient" style="font-size: 2.5rem; margin-bottom: 3rem;">A Deep-Tech Convergence</h2>
-          <div class="grid grid-3" style="gap: 1.5rem;">
-            <div class="badge pulse" style="font-size: 1.1rem; padding: 1.5rem; text-transform: none;">Artificial Intelligence</div>
-            <div class="badge pulse" style="font-size: 1.1rem; padding: 1.5rem; text-transform: none;">Animal Behavior Science</div>
-            <div class="badge pulse" style="font-size: 1.1rem; padding: 1.5rem; text-transform: none;">Machine Learning</div>
-            <div class="badge pulse" style="font-size: 1.1rem; padding: 1.5rem; text-transform: none;">Audio Intelligence</div>
-            <div class="badge pulse" style="font-size: 1.1rem; padding: 1.5rem; text-transform: none;">Veterinary Technology</div>
-            <div class="badge pulse" style="font-size: 1.1rem; padding: 1.5rem; text-transform: none;">Edge Computing & IoT</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Future Species Roadmap -->
-      <section id="roadmap" class="section">
-        <div class="container animate-on-scroll">
-          <h2 class="section-title text-gradient">Future Species Roadmap</h2>
-          <p class="text-center text-muted" style="max-width: 700px; margin: 0 auto 4rem; font-size: 1.1rem;">
-            The Animal Intelligence Platform is designed for progressive scalability across the phylogenetic tree.
+          <h2 class="section-title text-gradient">Partnerships & Innovation Ecosystem</h2>
+          <p class="text-muted" style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
+            SkillArion Development thrives within the global innovation ecosystem. We actively collaborate with incubation centers, startup accelerators, and government R&D grants to build the next generation of AI solutions.
           </p>
           
-          <div class="grid grid-4" style="gap: 2rem;">
-            <div class="glass-card" style="text-align: center;">
-              <div class="badge primary">Phase 1</div>
-              <h3 style="color: #fff; margin-bottom: 1rem;">Dogs</h3>
-              <p class="text-dim" style="font-size: 0.9rem;">Establishing the baseline translation matrix and wearable edge hardware integration.</p>
-            </div>
-            <div class="glass-card" style="text-align: center;">
-              <div class="badge">Phase 2</div>
-              <h3 style="color: #fff; margin-bottom: 1rem;">Cats</h3>
-              <p class="text-dim" style="font-size: 0.9rem;">Adapting acoustic models to feline frequency ranges and nuanced behavioral signaling.</p>
-            </div>
-            <div class="glass-card" style="text-align: center;">
-              <div class="badge">Phase 3</div>
-              <h3 style="color: #fff; margin-bottom: 1rem;">Livestock</h3>
-              <p class="text-dim" style="font-size: 0.9rem;">Deploying massive scale herd-intelligence for predictive health and agricultural welfare.</p>
-            </div>
-            <div class="glass-card" style="text-align: center;">
-              <div class="badge">Phase 4</div>
-              <h3 style="color: #fff; margin-bottom: 1rem;">Wildlife</h3>
-              <p class="text-dim" style="font-size: 0.9rem;">Conservation-focused acoustic monitoring systems for endangered species behavioral tracking.</p>
-            </div>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem;">
+            <span class="badge" style="background: rgba(74, 144, 226, 0.1); border-color: rgba(74, 144, 226, 0.3);">Startup India Programs</span>
+            <span class="badge" style="background: rgba(74, 144, 226, 0.1); border-color: rgba(74, 144, 226, 0.3);">AICTE Innovation Grants</span>
+            <span class="badge" style="background: rgba(74, 144, 226, 0.1); border-color: rgba(74, 144, 226, 0.3);">University Incubators</span>
+            <span class="badge" style="background: rgba(74, 144, 226, 0.1); border-color: rgba(74, 144, 226, 0.3);">Corporate R&D Labs</span>
           </div>
           
-          <div class="glass-card" style="margin-top: 2rem; text-align: center; background: rgba(200, 155, 92, 0.05); border-color: rgba(200, 155, 92, 0.3);">
-            <div class="badge primary">Phase 5</div>
-            <h3 style="color: var(--color-primary); font-size: 1.8rem; margin-bottom: 0.5rem;">Universal Animal Intelligence Platform</h3>
-            <p class="text-dim">A generalized foundation model capable of cross-species language mapping and real-time biological translation.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Grand Vision 2035 -->
-      <section id="vision2035" class="section" style="background: rgba(5, 7, 10, 0.8); border-top: 1px solid var(--glass-border);">
-        <div class="container text-center animate-on-scroll">
-          <div class="neural-node" style="font-size: 4rem; margin-bottom: 1rem;">🌌</div>
-          <h2 class="display-title text-gradient" style="font-size: 3.5rem;">Vision 2035</h2>
-          <p class="text-muted" style="max-width: 800px; margin: 0 auto 3rem; font-size: 1.25rem; line-height: 1.8;">
-            Imagine a world where pets can communicate discomfort before an illness becomes critical. Where veterinarians receive real-time emotional and behavioral insights. Where rescue organizations can instantly identify animals in distress, and wildlife conservation teams understand species behavior as intimately as their own.<br/><br/>
-            <strong style="color: #fff;">Imagine a world where humans and animals share a deeper level of understanding than ever before.</strong><br/><br/>
-            SkillArion Development is building the technologies to make that future possible.
-          </p>
-          
-          <div style="margin-top: 4rem;">
-            <a href="mailto:info@skillariondevelopment.in" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Join The Research Initiative</a>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <p class="text-muted" style="width: 100%; margin-bottom: 1rem;">Ready to build the future with us?</p>
+            <a href="mailto:info@skillariondevelopment.in" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+              Connect With Us
+            </a>
           </div>
         </div>
       </section>
@@ -318,3 +175,4 @@
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
+

@@ -7,18 +7,16 @@ const navbarTemplate = `
         <img src="/images/logo.jpg" alt="SkillArion Logo" class="brand-logo">
         <div class="logo-text-wrapper">
           <span class="logo-title">SkillArion Development</span>
-          <span class="logo-tagline">Decoding Animal Intelligence Through Artificial Intelligence</span>
+          <span class="logo-tagline">Bridging Academia to Industry Excellence</span>
         </div>
       </a>
       
       <button class="mobile-menu-btn">☰</button>
       
       <nav class="nav-links">
-        <a href="#vision" class="nav-link">Moonshot</a>
-        <a href="#challenges" class="nav-link">Challenges</a>
-        <a href="#stack" class="nav-link">Intelligence Stack</a>
-        <a href="#research" class="nav-link">Research Lab</a>
-        <a href="#roadmap" class="nav-link">Roadmap</a>
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/index.html#about" class="nav-link">About Us</a>
+        <a href="/animal-ai.html" class="nav-link">Animal Emotion Detection</a>
         <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem;">Partnerships</a>
       </nav>
     </div>
@@ -37,26 +35,23 @@ const footerTemplate = `
             </div>
           </a>
           <p class="text-muted" style="margin-bottom: 1rem;">
-            Building foundational AI systems that enable communication, understanding, protection, and intelligence between humans and animals.
+            Pioneering the future of AI in education and animal welfare.
           </p>
         </div>
         
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Products</h4>
           <ul class="footer-links">
-            <li><a href="#vision">The Moonshot Vision</a></li>
-            <li><a href="#stack">Architecture Stack</a></li>
-            <li><a href="#research">R&D Lab</a></li>
-            <li><a href="#roadmap">Future Roadmap</a></li>
+            <li><a href="/animal-ai.html">Animal Emotion Detection & Protection System</a></li>
           </ul>
         </div>
         
         <div class="footer-col">
-          <h4>Vision 2035</h4>
+          <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="#vision2035">Universal Platform</a></li>
-            <li><a href="#vision2035">Veterinary AI</a></li>
-            <li><a href="#vision2035">Wildlife Conservation</a></li>
+            <li><a href="/index.html#about">About Us</a></li>
+            <li><a href="/index.html#vision">Vision & Mission</a></li>
+            <li><a href="/index.html#partnerships">Partnerships</a></li>
           </ul>
         </div>
         
