@@ -9,25 +9,25 @@
   --off-white: #f7f5f2;
   --cream: #ede8e1;
 
-  /* Surfaces */
-  --bg-base: #0a0a0a;
-  --bg-section: #0f0f0f;
-  --bg-card: #141414;
-  --bg-elevated: #1a1a1a;
+  /* Surfaces — Light Theme */
+  --bg-base: #ffffff;
+  --bg-section: #f7f6f3;
+  --bg-card: #f0ede8;
+  --bg-elevated: #e8e4de;
 
   /* Borders */
-  --border: rgba(255,255,255,0.08);
-  --border-hover: rgba(255,255,255,0.18);
+  --border: rgba(0,0,0,0.08);
+  --border-hover: rgba(0,0,0,0.18);
 
   /* Brand Accent — warm amber, restrained use */
-  --accent: #d4a574;
-  --accent-light: #e8c49a;
-  --accent-dim: rgba(212, 165, 116, 0.12);
+  --accent: #b8852a;
+  --accent-light: #d4a459;
+  --accent-dim: rgba(184, 133, 42, 0.1);
 
   /* Text */
-  --text-primary: #f0ece7;
-  --text-secondary: #8a847c;
-  --text-tertiary: #5a544e;
+  --text-primary: #111111;
+  --text-secondary: #5a5650;
+  --text-tertiary: #9a9590;
 
   /* Typography */
   --font-display: 'Outfit', 'Inter', sans-serif;
@@ -83,6 +83,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 img, video {
@@ -226,7 +227,7 @@ h1 { @extend .display-xl; }
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -308,12 +309,12 @@ h1 { @extend .display-xl; }
 }
 
 .btn-primary {
-  background: var(--text-primary);
-  color: var(--bg-base);
+  background: #111111;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: var(--cream);
+  background: #2a2a2a;
   transform: translateY(-1px);
 }
 
@@ -326,7 +327,7 @@ h1 { @extend .display-xl; }
 .btn-ghost:hover {
   color: var(--text-primary);
   border-color: var(--border-hover);
-  background: rgba(255,255,255,0.04);
+  background: rgba(0,0,0,0.04);
 }
 
 .btn-accent {
@@ -395,8 +396,8 @@ h1 { @extend .display-xl; }
 .hero-bg-gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,165,116,0.06) 0%, transparent 70%),
-              radial-gradient(ellipse 60% 40% at 20% 80%, rgba(255,255,255,0.02) 0%, transparent 60%);
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(184,133,42,0.06) 0%, transparent 65%),
+              radial-gradient(ellipse 50% 40% at 80% 90%, rgba(0,0,0,0.02) 0%, transparent 60%);
 }
 
 .hero-bg-noise {
@@ -520,7 +521,7 @@ h1 { @extend .display-xl; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(212,165,116,0.07) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(184,133,42,0.06) 0%, transparent 60%);
 }
 
 .product-visual-placeholder .ph-icon {
@@ -533,6 +534,7 @@ h1 { @extend .display-xl; }
   justify-content: center;
   color: var(--text-tertiary);
   font-size: 1.5rem;
+  background: var(--bg-base);
 }
 
 .product-visual-placeholder .ph-label {
@@ -543,7 +545,7 @@ h1 { @extend .display-xl; }
 
 .img-placeholder {
   width: 100%;
-  background: var(--bg-elevated);
+  background: var(--bg-card);
   border-radius: 12px;
   border: 1px solid var(--border);
   display: flex;
@@ -564,8 +566,8 @@ h1 { @extend .display-xl; }
     -45deg,
     transparent,
     transparent 10px,
-    rgba(255,255,255,0.01) 10px,
-    rgba(255,255,255,0.01) 20px
+    rgba(0,0,0,0.015) 10px,
+    rgba(0,0,0,0.015) 20px
   );
 }
 
@@ -1022,7 +1024,7 @@ h1 { @extend .display-xl; }
 .page-loader {
   position: fixed;
   inset: 0;
-  background: var(--bg-base);
+  background: #ffffff;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -1040,7 +1042,7 @@ h1 { @extend .display-xl; }
 .loader-ring {
   width: 32px;
   height: 32px;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid rgba(0,0,0,0.1);
   border-top-color: var(--accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -1075,7 +1077,7 @@ h1 { @extend .display-xl; }
   display: none;
   position: fixed;
   inset: 0;
-  background: var(--bg-base);
+  background: #ffffff;
   z-index: 99;
   padding: var(--space-6) var(--space-8);
   flex-direction: column;
