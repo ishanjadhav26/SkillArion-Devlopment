@@ -1,150 +1,148 @@
-import { injectComponents } from './components.js';
+// SkillArion Development — Main JS
+// Minimal, purposeful interactions only
 
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inject Navbar and Footer
-  injectComponents();
+// =========================================
+// Page Loader
+// =========================================
+function initLoader() {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
 
-  // 2. Remove Page Loader
-  const loader = document.querySelector('.page-loader');
-  if (loader) {
+  window.addEventListener('load', () => {
     setTimeout(() => {
       loader.classList.add('hidden');
-    }, 300); // Small delay for effect
-  }
+    }, 300);
+  });
+}
 
-  // 3. Initialize Scroll Animations via Intersection Observer
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
+// =========================================
+// Sticky Nav
+// =========================================
+function initNav() {
+  const nav = document.getElementById('nav');
+  if (!nav) return;
+
+  const onScroll = () => {
+    if (window.scrollY > 20) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
   };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        // Optional: Stop observing once animated
-        // observer.unobserve(entry.target); 
-      }
-    });
-  }, observerOptions);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  animatedElements.forEach(el => observer.observe(el));
+// =========================================
+// Mobile Menu
+// =========================================
+function initMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openBtn = document.getElementById('mobile-open');
+  const closeBtn = document.getElementById('mobile-close');
 
-  // 4. Mobile Menu Toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
+  if (!mobileMenu) return;
 
-  if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '80px';
-      navLinks.style.left = '0';
-      navLinks.style.right = '0';
-      navLinks.style.background = 'rgba(11, 14, 20, 0.95)';
-      navLinks.style.padding = '1rem';
-      navLinks.style.borderBottom = '1px solid var(--glass-border)';
-    });
-  }
-
-  // 5. Initialize tsparticles (Global Neural Network effect) - using v2 API
-  const particlesContainer = document.getElementById('global-particles');
-  if (particlesContainer) {
-    const initParticles = async () => {
-      try {
-        if (window.tsParticles) {
-          await window.tsParticles.load('global-particles', {
-            background: { color: { value: 'transparent' } },
-            fpsLimit: 60,
-            interactivity: {
-              events: { onHover: { enable: true, mode: 'grab' } },
-              modes: { grab: { distance: 180, links: { opacity: 0.5 } } }
-            },
-            particles: {
-              color: { value: ['#C89B5C', '#4a90e2', '#e0e0e0'] },
-              links: {
-                color: '#C89B5C', distance: 140, enable: true,
-                opacity: 0.12, width: 1
-              },
-              move: {
-                enable: true, speed: 0.7, direction: 'none',
-                random: true, outModes: { default: 'bounce' }
-              },
-              number: { density: { enable: true, area: 900 }, value: 70 },
-              opacity: {
-                value: { min: 0.08, max: 0.4 },
-                animation: { enable: true, speed: 0.8, sync: false }
-              },
-              shape: { type: 'circle' },
-              size: {
-                value: { min: 1, max: 3.5 },
-                animation: { enable: true, speed: 1.5, sync: false }
-              }
-            },
-            detectRetina: true
-          });
-        }
-      } catch (e) {
-        // Gracefully degrade if particles fail to load
-        console.warn('tsParticles could not be initialized:', e);
-      }
-    };
-    // Small delay to ensure the CDN script is fully ready
-    setTimeout(initParticles, 200);
-  }
-
-  // 6. Lightbox functionality
-  const createLightbox = () => {
-    const overlay = document.createElement('div');
-    overlay.className = 'lightbox-overlay';
-    overlay.innerHTML = `
-      <button class="lightbox-close">&times;</button>
-      <img class="lightbox-content" src="" alt="Zoomed Diagram">
-    `;
-    document.body.appendChild(overlay);
-
-    const closeBtn = overlay.querySelector('.lightbox-close');
-    const content = overlay.querySelector('.lightbox-content');
-
-    const closeLightbox = () => overlay.classList.remove('active');
-    
-    closeBtn.addEventListener('click', closeLightbox);
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeLightbox();
-    });
-    
-    // Add escape key support
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-
-    return { overlay, content };
+  const open = () => {
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
   };
 
-  const lightbox = createLightbox();
+  const close = () => {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  };
 
-  document.querySelectorAll('.diagram-container').forEach(container => {
-    container.addEventListener('click', () => {
-      const img = container.querySelector('img');
-      if (img) {
-        lightbox.content.src = img.src;
-        lightbox.overlay.classList.add('active');
-      }
-    });
+  if (openBtn) openBtn.addEventListener('click', open);
+  if (closeBtn) closeBtn.addEventListener('click', close);
+
+  // Close on link click
+  mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => {
+    link.addEventListener('click', close);
   });
 
-  // 7. Highlight active nav link based on current page
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(link => {
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+}
+
+// =========================================
+// Scroll Reveal
+// =========================================
+function initScrollReveal() {
+  const elements = document.querySelectorAll('[data-reveal]');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px',
+    }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
+// =========================================
+// Smooth anchor scrolling
+// =========================================
+function initAnchorScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = 80; // nav height
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+}
+
+// =========================================
+// Active nav link based on current page
+// =========================================
+function initActiveNav() {
+  const path = window.location.pathname;
+  document.querySelectorAll('.nav-link, .mobile-menu-link').forEach((link) => {
     const href = link.getAttribute('href');
-    if (href && currentPath.includes(href.replace('/', '')) && href !== '/index.html') {
-      link.style.color = 'var(--color-primary)';
-    } else if ((currentPath === '/' || currentPath.includes('index')) && href === '/index.html') {
-      link.style.color = 'var(--color-primary)';
+    if (!href) return;
+
+    // Normalize both
+    const linkPath = href.split('#')[0];
+    const currentPage = path.split('/').pop() || 'index.html';
+
+    if (
+      linkPath === `/${currentPage}` ||
+      (currentPage === '' && linkPath === '/index.html') ||
+      (currentPage === 'index.html' && linkPath === '/') ||
+      linkPath === path
+    ) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
+}
 
+// =========================================
+// Init all
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+  initLoader();
+  initNav();
+  initMobileMenu();
+  initScrollReveal();
+  initAnchorScroll();
+  initActiveNav();
 });

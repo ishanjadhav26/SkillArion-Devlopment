@@ -2,307 +2,480 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+    <link rel="icon" type="image/jpg" href="/images/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animal Emotion Detection | SkillArion Development</title>
-    <meta name="description" content="The World's First AI-Powered Dog-to-Human Language Translation Collar by SkillArion Development." />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <title>Animal Emotion Detection & Protection System — SkillArion Development</title>
+    <meta name="description" content="The world's first AI-powered multimodal animal emotion detection system. CNN-LSTM acoustic and biometric intelligence in a smart wearable collar." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="/src/css/main.css" />
     <link rel="stylesheet" href="/src/css/animations.css" />
   </head>
   <body>
-    <!-- Global Particle System -->
-    <div id="global-particles"></div>
-    <!-- Ambient Orbs -->
-    <div class="orb orb-gold"></div>
-    <div class="orb orb-blue"></div>
-    
+
     <!-- Page Loader -->
-    <div class="page-loader">
-      <div class="loader-spinner"></div>
+    <div class="page-loader" id="page-loader">
+      <div class="loader-ring"></div>
     </div>
 
-    <!-- App Container -->
-    <div id="app">
-      
-      <!-- Product Hero -->
-      <section class="section" style="min-height: 80vh; display: flex; align-items: center; padding-top: 100px;">
-        <div class="container text-center hero-content">
-          <div class="badge pulse" style="margin-bottom: 2rem;">Deep Tech Hardware Initiative</div>
-          <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem;">
-            Animal Emotion Detection & <br/>Protection System
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <a href="/index.html" class="nav-logo">
+          <img src="/images/logo.jpg" alt="SkillArion" />
+          <span class="nav-logo-text">SkillArion</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-close" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mobile-menu-links">
+        <a href="/index.html" class="mobile-menu-link">Home</a>
+        <a href="/about.html" class="mobile-menu-link">About</a>
+        <a href="/contact.html" class="mobile-menu-link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="/index.html" class="nav-logo">
+            <img src="/images/logo.jpg" alt="SkillArion Development" />
+            <span class="nav-logo-text">SkillArion Development</span>
+          </a>
+          <nav class="nav-links">
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/animal-ai.html" class="nav-link active">The Technology</a>
+            <a href="/contact.html" class="nav-link">Contact</a>
+          </nav>
+          <div class="nav-cta">
+            <a href="/contact.html" class="btn btn-ghost">Partner With Us</a>
+            <button class="mobile-menu-btn" id="mobile-open" aria-label="Open menu">☰</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===========================
+         HERO
+         =========================== -->
+    <section class="page-hero" style="background: var(--bg-section); border-bottom: 1px solid var(--border); padding-bottom: 5rem;">
+      <div class="container">
+        <div style="max-width: 800px;">
+          <div class="section-label">Animal Emotion Detection & Protection System</div>
+          <h1 class="display-lg" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+            The world's first<br />multimodal animal<br />emotion intelligence platform.
           </h1>
-          <h2 style="font-size: 1.5rem; color: var(--color-primary); font-family: var(--font-body); font-weight: 400; margin-bottom: 2rem;">
-            World's First AI-Powered Dog-to-Human Language Translation Collar
-          </h2>
-          <p class="text-muted" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2.5rem;">
-            Bridging the inter-species communication gap. Utilizing proprietary edge-AI and advanced biometrics to translate animal vocalizations and physiological data into actionable human insights.
+          <p class="body-lg" style="max-width: 560px; margin-bottom: 2.5rem;">
+            A proprietary AI system that fuses acoustic analysis, biometric sensing, and edge computing to classify animal emotional states and communicate them to humans in real time.
           </p>
-          <div style="display: flex; gap: 1rem; justify-content: center;">
-            <a href="#technology" class="btn btn-primary">Discover the Tech</a>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#architecture" class="btn btn-primary btn-lg">View Architecture</a>
+            <a href="/contact.html" class="btn btn-ghost btn-lg">Research Collaboration</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Executive Summary & Problem -->
-      <section class="section" style="background: var(--glass-bg);">
-        <div class="container animate-on-scroll">
-          <div class="grid grid-2">
-            <div>
-              <h2 class="text-gradient">The Communication Barrier</h2>
-              <p class="text-muted" style="margin-bottom: 1.5rem;">
-                Millions of pets and working animals suffer from undiagnosed stress, illness, and anxiety due to the human inability to accurately interpret animal signaling. Traditional veterinary care relies heavily on reactive observation, often treating symptoms only after they have become severe.
-              </p>
-              <h3 style="margin-top: 2rem;">Product Vision</h3>
-              <p class="text-muted">
-                To create a seamless, real-time translation interface that empowers pet owners, veterinarians, NGOs, and researchers to understand the emotional and physical state of canines, drastically reducing preventable suffering and improving training outcomes.
-              </p>
-            </div>
-            <div class="glass-card delay-200" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-              <h3 style="margin-bottom: 1rem; color: var(--color-primary);">Real World Impact</h3>
-              <p class="text-muted" style="margin-bottom: 2rem;">
-                Transforming animal welfare from guesswork into a data-driven science.
-              </p>
-              <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                <div>
-                  <div style="font-size: 1.8rem; color: var(--color-text-main); font-family: var(--font-display); font-weight: 700;">NGOs</div>
-                  <div class="text-muted" style="font-size: 0.8rem;">Shelter Triage</div>
-                </div>
-                <div>
-                  <div style="font-size: 1.8rem; color: var(--color-text-main); font-family: var(--font-display); font-weight: 700;">Vet</div>
-                  <div class="text-muted" style="font-size: 0.8rem;">Early Diagnostics</div>
-                </div>
-                <div>
-                  <div style="font-size: 1.8rem; color: var(--color-text-main); font-family: var(--font-display); font-weight: 700;">City</div>
-                  <div class="text-muted" style="font-size: 0.8rem;">Stray Management</div>
-                </div>
-              </div>
-            </div>
+    <!-- ===========================
+         OVERVIEW STATS
+         =========================== -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="stat-row" data-reveal>
+          <div class="stat-item">
+            <div class="stat-value">5</div>
+            <div class="stat-label">Core emotional states classified: Happy, Fearful, Aggressive, Neutral, Pain</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">CNN-LSTM</div>
+            <div class="stat-label">Proprietary deep learning architecture fusing audio and biometric streams</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">Edge AI</div>
+            <div class="stat-label">On-device real-time inference — no cloud dependency for core detection</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- How it Works (Pipeline) -->
-      <section id="technology" class="section">
-        <div class="container">
-          <h2 class="section-title text-gradient animate-on-scroll">How It Works</h2>
-          
-          <div class="grid grid-3" style="margin-top: 3rem;">
-            <div class="glass-card animate-on-scroll delay-100">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem;">1. Smart Collar Architecture</h3>
-              <p class="text-muted" style="font-size: 0.9rem;">
-                IoT-enabled collar equipped with high-fidelity microphones, heart rate monitors, accelerometer, and temperature sensors. Designed for rugged, all-weather deployment with ultra-low power consumption.
-              </p>
-            </div>
-            <div class="glass-card animate-on-scroll delay-200">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem;">2. Emotion Detection Pipeline</h3>
-              <p class="text-muted" style="font-size: 0.9rem;">
-                On-device edge AI processes multimodal data streams in real-time, running classification algorithms to map physiological markers to a complex matrix of emotional states (anxiety, joy, pain, aggression).
-              </p>
-            </div>
-            <div class="glass-card animate-on-scroll delay-300">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem;">3. AI Translation Engine</h3>
-              <p class="text-muted" style="font-size: 0.9rem;">
-                The core LLM translates the identified emotional matrix into contextual human language. A built-in Text-To-Speech (TTS) module allows the collar to physically "speak" to humans nearby, bridging the communication gap.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- System Architecture -->
-      <section class="section">
-        <div class="container animate-on-scroll">
-          <h2 class="section-title text-gradient">System Architecture</h2>
-          
-          <div class="grid grid-2" style="margin-bottom: 2rem; gap: 2rem;">
-            <!-- Smart Collar Architecture -->
-            <div class="glass-card" style="padding: 0; overflow: hidden; position: relative;">
-              <img src="/images/animal-ai-iot.png" alt="Smart Collar Architecture" style="width: 100%; height: auto; display: block; border-radius: inherit;">
-            </div>
-            
-            <!-- AI Processing Pipeline -->
-            <div class="glass-card" style="padding: 0; overflow: hidden; position: relative;">
-              <img src="/images/animal-ai-pipeline.jpg" alt="AI Processing Pipeline" style="width: 100%; height: auto; display: block; border-radius: inherit;">
-            </div>
-            
-            <!-- Translation Workflow -->
-            <div class="glass-card" style="padding: 0; overflow: hidden; position: relative;">
-              <img src="/images/animal-ai-workflow.jpg" alt="Translation Workflow" style="width: 100%; height: auto; display: block; border-radius: inherit;">
-            </div>
-            
-            <!-- Cloud Architecture -->
-            <div class="glass-card" style="padding: 0; overflow: hidden; position: relative;">
-              <img src="/images/animal-ai-cloud.jpg" alt="Cloud Architecture" style="width: 100%; height: auto; display: block; border-radius: inherit;">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Ecosystem & Tech Stack -->
-      <section class="section" style="background: var(--color-bg-main);">
-        <div class="container grid grid-2 animate-on-scroll">
-          <div class="glass-card" style="padding: 2rem;">
-            <h3>Ecosystem Integration</h3>
-            <ul style="list-style: none; padding-top: 1rem;">
-              <li style="margin-bottom: 1.5rem;">
-                <strong style="color: var(--color-primary);">Mobile Application:</strong> Real-time dashboard for owners tracking emotional trends, health vitals, and GPS location.
-              </li>
-              <li style="margin-bottom: 1.5rem;">
-                <strong style="color: var(--color-primary);">Emergency Alert System:</strong> Automated push notifications to owners and registered vets if critical distress or abnormal vitals are detected.
-              </li>
-              <li>
-                <strong style="color: var(--color-primary);">Research API:</strong> Anonymized aggregated data streams available for ethological and veterinary research institutions.
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="text-gradient">Technology Stack</h2>
-            <div class="grid grid-2" style="margin-top: 2rem;">
-              <div>
-                <h4 style="color: var(--color-text-main);">Hardware</h4>
-                <p class="text-muted" style="font-size: 0.9rem;">Custom PCB, ARM Cortex-M, MEMS Mics, Bio-sensors</p>
-              </div>
-              <div>
-                <h4 style="color: var(--color-text-main);">Edge AI</h4>
-                <p class="text-muted" style="font-size: 0.9rem;">TensorFlow Lite, TinyML Acoustic Models</p>
-              </div>
-              <div>
-                <h4 style="color: var(--color-text-main);">Cloud infrastructure</h4>
-                <p class="text-muted" style="font-size: 0.9rem;">AWS IoT Core, Time-Series Databases</p>
-              </div>
-              <div>
-                <h4 style="color: var(--color-text-main);">Mobile App</h4>
-                <p class="text-muted" style="font-size: 0.9rem;">React Native, WebSockets for real-time telemetry</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Real-World Applications -->
-      <section class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px);">
-        <div class="container animate-on-scroll">
-          <h2 class="section-title text-gradient">Real-World Applications</h2>
-          <div class="grid grid-3" style="margin-top: 2rem;">
-            <div class="glass-card">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Veterinary Medicine</h3>
-              <p class="text-muted">
-                Enable vets to obtain pre-appointment emotional baselines of animals before they arrive. Detect hidden pain, anxiety, or illness signatures that are invisible to the human eye, enabling faster and more accurate diagnoses.
-              </p>
-            </div>
-            <div class="glass-card">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Smart City & Stray Management</h3>
-              <p class="text-muted">
-                Partner with municipal corporations to deploy collar networks on stray animal populations, feeding real-time behavioral data to a city-wide welfare dashboard. Identify sick or aggressive animals proactively.
-              </p>
-            </div>
-            <div class="glass-card">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Rescue Organizations & NGOs</h3>
-              <p class="text-muted">
-                Equip shelters with AI-powered triage. Identify the most distressed animals in a large shelter instantly, prioritize care resources, and accelerate rehabilitation timelines.
-              </p>
-            </div>
-            <div class="glass-card">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Research & Ethology</h3>
-              <p class="text-muted">
-                Offer an anonymized data API to universities and ethology researchers, creating a new scientific paradigm for understanding canine behavior at population scale.
-              </p>
-            </div>
-            <div class="glass-card">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">K9 & Working Dogs</h3>
-              <p class="text-muted">
-                Monitor the emotional and physical state of police dogs, search-and-rescue animals, and military K9 units in real-time, ensuring optimal performance and long-term health.
-              </p>
-            </div>
-            <div class="glass-card">
-              <h3 style="color: var(--color-primary); font-size: 1.3rem; margin-bottom: 1rem;">Pet Insurance & Wellness</h3>
-              <p class="text-muted">
-                Integrate with pet insurance providers to offer preventive care alerts and wellness scoring, creating new data-driven premium models based on real-time biometric health data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Social Impact & Future Scope -->
-      <section class="section">
-        <div class="container animate-on-scroll">
-          <div class="grid grid-2">
-            <div>
-              <h2 class="text-gradient">Social Impact</h2>
-              <p class="text-muted" style="margin-bottom: 1.5rem;">
-                Every year, millions of animals suffer in silence. They cannot describe pain, anxiety, or loneliness in a language humans understand. The Animal Emotion Detection system is not just a product — it is a fundamental shift in humanity's moral relationship with animals.
-              </p>
-              <p class="text-muted">
-                By making emotional states legible through data, we create a world where neglect and undetected suffering become things of the past. Welfare transforms from reactive to proactive, from guesswork to evidence-based care.
-              </p>
-            </div>
-            <div class="glass-card">
-              <h3 style="margin-bottom: 1.5rem;">Future Scope</h3>
-              <ul style="list-style: none;">
-                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                  <span style="color: var(--color-primary); font-weight: 700;">01</span>
-                  <div>
-                    <strong>Multi-Species Expansion</strong>
-                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Extend the model to felines, equines, and livestock beyond canines.</p>
-                  </div>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                  <span style="color: var(--color-primary); font-weight: 700;">02</span>
-                  <div>
-                    <strong>AR/VR Integration</strong>
-                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Real-time emotional overlay in AR glasses for handlers and vets.</p>
-                  </div>
-                </li>
-                <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-                  <span style="color: var(--color-primary); font-weight: 700;">03</span>
-                  <div>
-                    <strong>Government Policy Integration</strong>
-                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Provide data to inform national animal welfare legislation and enforcement.</p>
-                  </div>
-                </li>
-                <li style="display: flex; gap: 0.75rem;">
-                  <span style="color: var(--color-primary); font-weight: 700;">04</span>
-                  <div>
-                    <strong>Global Research Consortium</strong>
-                    <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.25rem;">Build the world's largest open ethological dataset through institutional partnerships.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Innovation CTA -->
-      <section class="section" style="background: rgba(10, 15, 25, 0.6); backdrop-filter: blur(10px); border-top: 1px solid var(--glass-border);">
-        <div class="container text-center animate-on-scroll">
-          <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Join the Innovation Journey</h2>
-          <p class="text-muted" style="max-width: 700px; margin: 0 auto 2.5rem;">
-            We invite leading incubators, research institutions, and innovation partners to collaborate on hardware prototyping and finalizing our acoustic-emotion neural networks. Let's build the future of inter-species communication.
-          </p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="mailto:info@skillariondevelopment.in" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">
-              Connect With Us
+    <!-- ===========================
+         HOW IT WORKS — OVERVIEW
+         =========================== -->
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;">
+          <div data-reveal>
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              Six layers of intelligence.
+            </h2>
+            <p class="section-body" style="margin-bottom: 2rem;">
+              The system operates as an integrated pipeline — each layer purpose-built and optimized, feeding into the next with minimal latency and maximum fidelity.
+            </p>
+            <a href="#architecture" class="btn-arrow">
+              See the architecture diagrams
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
+
+          <div data-reveal data-reveal-delay="2">
+            <div class="process-flow">
+              <div class="process-step">
+                <div class="process-step-dot"><div class="process-step-dot-inner"></div></div>
+                <div class="process-step-content">
+                  <div class="process-step-title">Layer 1 — Smart Collar Hardware</div>
+                  <div class="process-step-desc">INMP441 microphone, MAX30102 heart rate & SpO₂, DS18B20 temperature, MPU6050 motion sensor, GPS module, emergency SOS, and bone-conduction audio output — all on a Raspberry Pi 4 edge unit.</div>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-dot"><div class="process-step-dot-inner"></div></div>
+                <div class="process-step-content">
+                  <div class="process-step-title">Layer 2 — Acoustic Feature Extraction</div>
+                  <div class="process-step-desc">3-second bark recordings are segmented and processed through MFCC (40), delta features (40), chroma (12), spectral contrast (7), and RMS energy (1) — generating a 140×130×1 output tensor.</div>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-dot"><div class="process-step-dot-inner"></div></div>
+                <div class="process-step-content">
+                  <div class="process-step-title">Layer 3 — Biometric Normalization</div>
+                  <div class="process-step-desc">Continuous biometric streams (heart rate, SpO₂, temperature, activity, bark count) are baseline-normalized, scale-normalized, and anomaly-flagged before fusion.</div>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-dot"><div class="process-step-dot-inner"></div></div>
+                <div class="process-step-content">
+                  <div class="process-step-title">Layer 4 — CNN-LSTM Emotion Model</div>
+                  <div class="process-step-desc">Three Conv2D layers extract spatial audio features. An LSTM (64 units) with multi-head attention captures temporal patterns. A Softmax classifier outputs 5-class emotion probabilities.</div>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-dot"><div class="process-step-dot-inner"></div></div>
+                <div class="process-step-content">
+                  <div class="process-step-title">Layer 5 — Multimodal Fusion Engine</div>
+                  <div class="process-step-desc">Emotion class, confidence, and all biometric features are fused through a Random Forest / XGBoost ensemble layer for final wellness and pain scoring.</div>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-dot"><div class="process-step-dot-inner"></div></div>
+                <div class="process-step-content">
+                  <div class="process-step-title">Layer 6 — Translation & Notification</div>
+                  <div class="process-step-desc">Detected states are translated into natural language and delivered via the mobile owner app, veterinary portal, and optionally through the collar's TTS voice output module.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </div>
+    <!-- ===========================
+         ARCHITECTURE DIAGRAMS
+         =========================== -->
+    <section class="section" id="architecture" style="background: var(--bg-section); border-top: 1px solid var(--border);">
+      <div class="container">
+        <div style="text-align: center; max-width: 560px; margin: 0 auto 4rem;" data-reveal>
+          <div class="section-label">System Architecture</div>
+          <h2 class="section-title" style="margin-top: 1rem;">Diagrams</h2>
+        </div>
 
-    <!-- tsparticles -->
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2/tsparticles.slim.bundle.min.js"></script>
-    <!-- Main JS -->
+        <!-- Diagram 1 — Cloud Architecture -->
+        <div data-reveal style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+            Cloud Architecture — Scalable AI & IoT Infrastructure
+          </div>
+          <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border);">
+            <img
+              src="/images/animal-ai-cloud.jpg"
+              alt="Cloud Architecture – Scalable AI & IoT Infrastructure for Canine Wellness Intelligence"
+              style="width: 100%; height: auto; display: block;"
+            />
+          </div>
+        </div>
+
+        <!-- Diagram 2 — AI Processing Pipeline -->
+        <div data-reveal data-reveal-delay="1" style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+            AI Processing Pipeline — Multimodal Emotion & Wellness Intelligence Engine
+          </div>
+          <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border);">
+            <img
+              src="/images/animal-ai-pipeline.jpg"
+              alt="AI Processing Pipeline – Multimodal Emotion & Wellness Intelligence Engine"
+              style="width: 100%; height: auto; display: block;"
+            />
+          </div>
+        </div>
+
+        <!-- Diagram 3 — Translation Workflow -->
+        <div data-reveal data-reveal-delay="2" style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+            Emotion-to-Language Translation Workflow
+          </div>
+          <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border);">
+            <img
+              src="/images/animal-ai-workflow.jpg"
+              alt="Emotion Detection Matrix to NLP Translation Workflow"
+              style="width: 100%; height: auto; display: block;"
+            />
+          </div>
+        </div>
+
+        <!-- Diagram 4 — IoT Architecture -->
+        <div data-reveal data-reveal-delay="3">
+          <div style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+            Smart Collar IoT Hardware Architecture
+          </div>
+          <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border);">
+            <img
+              src="/images/animal-ai-iot.png"
+              alt="Smart Collar IoT Edge Device Architecture"
+              style="width: 100%; height: auto; display: block;"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         TECHNOLOGY DEEP-DIVE
+         =========================== -->
+    <section class="section">
+      <div class="container">
+        <div style="max-width: 540px; margin-bottom: 4rem;" data-reveal>
+          <div class="section-label">Technical Specification</div>
+          <h2 class="section-title" style="margin-top: 1rem;">
+            Every component, considered.
+          </h2>
+        </div>
+
+        <div class="tech-grid" data-reveal data-reveal-delay="1">
+          <div class="tech-cell">
+            <div class="tech-cell-icon">🎙️</div>
+            <div class="tech-cell-name">Acoustic Capture</div>
+            <div class="tech-cell-desc">INMP441 I2S digital microphone with 3-second sliding window capture. 60 dB SNR, flat frequency response. Bark segmentation with silence filtering.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">❤️</div>
+            <div class="tech-cell-name">Biometric Sensing</div>
+            <div class="tech-cell-desc">MAX30102 pulse oximeter (Heart Rate + SpO₂), DS18B20 temperature probe, MPU6050 6-axis IMU for activity and posture. 5 Hz continuous sampling.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">🧮</div>
+            <div class="tech-cell-name">Feature Engineering</div>
+            <div class="tech-cell-desc">Librosa-based pipeline: 40 MFCC + 40 delta coefficients + 12 chroma + 7 spectral contrast + 1 RMS energy. Output: 140×130×1 normalized tensor.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">🧠</div>
+            <div class="tech-cell-name">CNN-LSTM Architecture</div>
+            <div class="tech-cell-desc">3 × Conv2D layers (spatial) → LSTM 64 units with multi-head attention (temporal) → Softmax 5-class output. Trained on labeled dog vocalization datasets.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">🌲</div>
+            <div class="tech-cell-name">Fusion Layer</div>
+            <div class="tech-cell-desc">Random Forest or XGBoost ensemble fuses acoustic emotion features with normalized biometric streams for final health status, pain score, and anomaly flag outputs.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">📡</div>
+            <div class="tech-cell-name">Edge Deployment</div>
+            <div class="tech-cell-desc">TensorFlow Lite / ONNX model optimized for Raspberry Pi 4. Sub-200ms end-to-end inference latency. WiFi + cellular fallback for cloud sync.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">☁️</div>
+            <div class="tech-cell-name">Cloud Infrastructure</div>
+            <div class="tech-cell-desc">AWS IoT Core for MQTT device communication → S3 for raw audio archive → Timestream for time-series biometrics → EC2 FastAPI serving model predictions.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">📱</div>
+            <div class="tech-cell-name">Mobile & Portal</div>
+            <div class="tech-cell-desc">Owner app with real-time emotion alerts, wellness history, GPS tracking, and emergency SOS. Veterinary portal with clinical analytics and risk assessment dashboards.</div>
+          </div>
+          <div class="tech-cell">
+            <div class="tech-cell-icon">🔊</div>
+            <div class="tech-cell-name">Voice Output</div>
+            <div class="tech-cell-desc">gTTS / pyttsx3 text-to-speech module. The collar physically speaks detected emotions to humans nearby: "Your dog is showing signs of anxiety."</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         TECH STACK BADGES
+         =========================== -->
+    <section class="section-sm" style="background: var(--bg-section); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="container" data-reveal>
+        <div style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1.5rem;">
+          Technology Stack
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.625rem;">
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">Python</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">TensorFlow / Keras</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">PyTorch</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">Librosa</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">scikit-learn</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">XGBoost</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">FastAPI</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">Raspberry Pi 4</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">AWS IoT Core</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">AWS Timestream</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">AWS S3</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">MQTT</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">gTTS / pyttsx3</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">GPS Module</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">INMP441</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">MAX30102</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">MPU6050</span>
+          <span style="padding: 0.375rem 0.875rem; border: 1px solid var(--border); border-radius: 100px; font-size: 0.8125rem; color: var(--text-secondary); white-space: nowrap;">DS18B20</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         ECOSYSTEM
+         =========================== -->
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;">
+          <div data-reveal>
+            <div class="section-label">Ecosystem</div>
+            <h2 class="section-title" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              A complete intelligence ecosystem.
+            </h2>
+            <p class="section-body">
+              The system is not a sensor — it is a full-stack platform spanning hardware, firmware, cloud infrastructure, AI model serving, and mobile applications built around a single purpose.
+            </p>
+          </div>
+
+          <div data-reveal data-reveal-delay="2">
+            <div style="display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;">
+              <div style="background: var(--bg-base); padding: 1.75rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.375rem;">Owners</div>
+                  <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em;">Mobile Application</div>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Real-time alerts, wellness history, GPS</div>
+              </div>
+              <div style="background: var(--bg-base); padding: 1.75rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.375rem;">Veterinarians</div>
+                  <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em;">Clinical Portal</div>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Reports, risk scores, behavior analytics</div>
+              </div>
+              <div style="background: var(--bg-base); padding: 1.75rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.375rem;">The Collar</div>
+                  <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em;">Smart Collar Feedback</div>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-tertiary);">LED, voice alerts, emergency SOS</div>
+              </div>
+              <div style="background: var(--bg-base); padding: 1.75rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.375rem;">Research</div>
+                  <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.01em;">Analytics API</div>
+                </div>
+                <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Longitudinal behavioral datasets</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FUTURE ROADMAP
+         =========================== -->
+    <section class="section" style="background: var(--bg-section); border-top: 1px solid var(--border);">
+      <div class="container">
+        <div style="max-width: 540px; margin-bottom: 4rem;" data-reveal>
+          <div class="section-label">Roadmap</div>
+          <h2 class="section-title" style="margin-top: 1rem;">
+            What comes next.
+          </h2>
+        </div>
+
+        <div class="pillars" data-reveal data-reveal-delay="1">
+          <div class="pillar">
+            <span class="pillar-num">01</span>
+            <span class="pillar-title">Face Recognition</span>
+            <span class="pillar-desc">Identify saved contacts and family members in the dog's visual field — enabling behavior context awareness for known vs. unknown individuals.</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">02</span>
+            <span class="pillar-title">Multi-Species Models</span>
+            <span class="pillar-desc">Separate model architectures trained on cats, horses, and working animals — each optimized for species-specific vocalization and biometric profiles.</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">03</span>
+            <span class="pillar-title">Predictive Health AI</span>
+            <span class="pillar-desc">Time-series anomaly models that detect subtle behavioral degradation patterns 12–48 hours before acute health events become clinically apparent.</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">04</span>
+            <span class="pillar-title">Smart City IoT Integration</span>
+            <span class="pillar-desc">Sync with municipal smart infrastructure, animal shelters, and wildlife corridors for population-level monitoring and emergency coordination.</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">05</span>
+            <span class="pillar-title">Cloud AI Companion App</span>
+            <span class="pillar-desc">Next-generation caregiver application with conversational AI that answers behavioral questions based on the animal's actual live data history.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         CTA
+         =========================== -->
+    <section class="cta-section" style="border-top: 1px solid var(--border);">
+      <div class="container">
+        <div data-reveal>
+          <div class="section-label" style="text-align: center;">Research Collaboration</div>
+          <h2 class="cta-title" style="margin-top: 1rem;">
+            Interested in the research?
+          </h2>
+          <p class="cta-body">
+            We welcome collaboration with veterinary schools, animal behavior researchers, and AI institutions who want to co-develop or validate this technology.
+          </p>
+          <a href="/contact.html" class="btn btn-primary btn-lg">Connect With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-brand-name">SkillArion Development</div>
+            <div class="footer-brand-desc">Bridging Academia to Industry Excellence. Pioneering AI-powered animal emotion intelligence.</div>
+          </div>
+          <div>
+            <div class="footer-col-heading">Navigate</div>
+            <div class="footer-links">
+              <a href="/index.html">Home</a>
+              <a href="/about.html">About Us</a>
+              <a href="/animal-ai.html">The Technology</a>
+              <a href="/contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-heading">Contact</div>
+            <div class="footer-links">
+              <a href="mailto:info@skillariondevelopment.in">info@skillariondevelopment.in</a>
+              <a href="tel:+917673925472">+91 76739 25472</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 SkillArion Development. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
-
